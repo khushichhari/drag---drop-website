@@ -1,4 +1,4 @@
-/* css goes here....! */
+/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -245,4 +245,142 @@ button, input[type="file"] {
 #redo-btn:hover {
   background-color: #059669;
   box-shadow: 0 6px 20px rgb(5 150 105 / 0.85);
+}
+
+/* --- Mobile Responsive Styles --- */
+
+@media (max-width: 900px) {
+  .toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .toolbar button,
+  .toolbar input[type="file"] {
+    flex: 1 1 45%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .main {
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  .canvas {
+    flex: none;
+    width: 100%;
+    margin: 10px 0;
+    min-height: 300px;
+  }
+  
+  .inspector {
+    flex: none;
+    width: 100%;
+    padding: 20px 16px;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: none;
+  }
+  
+  .inspector h3 {
+    font-size: 1.1rem;
+    margin-bottom: 16px;
+  }
+  
+  .inspector input,
+  #image-controls input {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+  }
+  
+  .inspector-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .inspector-buttons button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+  
+  .output {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+  
+  .element {
+    min-width: 60px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .element img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .toolbar {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  
+  .toolbar button,
+  .toolbar input[type="file"] {
+    flex: 1 1 100%;
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+  
+  .main {
+    margin: 8px;
+  }
+  
+  .canvas {
+    min-height: 250px;
+  }
+  
+  .inspector {
+    padding: 16px 12px;
+  }
+  
+  .inspector h3 {
+    font-size: 1rem;
+  }
+  
+  .inspector input,
+  #image-controls input {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+  
+  .inspector-buttons button {
+    padding: 10px 0;
+    font-size: 0.95rem;
+  }
+  
+  .output {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+  }
+  
+  .element {
+    min-width: 50px;
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .element img {
+    max-width: 70px;
+  }
 }
