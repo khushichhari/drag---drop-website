@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drag & Drop Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="toolbar">
+    <button id="add-text">Add Text</button>
+    <input type="file" id="upload-image" accept="image/*">
+    <button id="save-btn">Save</button>
+  </div>
+
+  <div class="main">
+    <div id="canvas" class="canvas"></div>
+
+    <div class="inspector">
+  <h3>Inspector</h3>
+  <label>Text: <input type="text" id="prop-text"></label>
+  <label>Font Size: <input type="number" id="prop-font-size" min="8" max="72"></label>
+  <label>Color: <input type="color" id="prop-color"></label>
+
+  <div id="image-controls" style="display: none;">
+    <label>Width: <input type="number" id="prop-width" min="10"></label>
+    <label>Height: <input type="number" id="prop-height" min="10"></label>
+    <button id="crop-image">Crop</button>
+  </div>
+
+  <div class="inspector-buttons">
+  <button id="remove-element">Remove</button>
+  <button id="undo-btn">Undo</button>
+  <button id="redo-btn">Redo</button>
+</div>
+
+</div>
+
+  </div>
+
+  <div id="output" class="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
